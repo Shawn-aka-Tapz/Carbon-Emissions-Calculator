@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="GREENMAPS" />
+    <meta name="description" content="Green Maps">
+    <link rel="icon" type="image/png" href="72-720588_simple-location-map-icon-dark-green-location-icon.png">
+
+    <title>Green Maps</title>
+
+
+    <link href="css/plugins.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="css/hexagons.min.css">
+<link rel="stylesheet" href="css/nice-select.css">
+<link rel="stylesheet" href="css/main.css">
+<link href="css/plugins.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/linearicons.css">
+    <style>
+        /*body { margin: 0; padding: 0; }*/
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+
+<body>
+    <script>
+        AOS.init(); 
+    </script>
+
+    <div class="body-inner">
+
+        <header id="header" data-transparent="true" data-fullwidth="true" class="dark submenu-light">
+            <div class="header-inner">
+                <div class="container">
+
+                    <div id="logo"> <span class="logo-default"><img
+                                src="72-720588_simple-location-map-icon-dark-green-location-icon-removebg-preview.png">
+                        </span> </div>
+
+
+
+
+
+                    <div id="mainMenu-trigger"> <a class="lines-button x"><span class="lines"></span></a> </div>
+
+
+                    <div id="mainMenu">
+                        <div class="container">
+                            <nav>
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#maps">Map</a></li>
+                                    <li><a href="#data">Carbon Data</a></li>
+                                    <li><a href="plasticlog.html">Plastic Logger</a></li>
+                                    <li><a href="https://docs.mapbox.com/help/demos/optimization-api/step-five.html">Optimize Route</a></li>
+                                    <li><a href="https://teamtrees.org/">Donate</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+
+        <section class="fullscreen background-image"
+            style="background-image:url(tips-for-using-background-textures-in-web-design.jpg);" data-aos="fade-down">
+            <div id="particles-dots" class="particles"></div>
+            <div class="container-fluid">
+                <div class="container-fullscreen">
+                    <div class="text-middle text-center text-light">
+                        <span id="test">
+                            <h2 class="text-lg m-t-0">Welcome to Green Maps</h2>
+                            <p class="lead">We wish you a safe and green travel!</p>
+                        </span>
+                        <a href="#maps"><i class="fa fa-chevron-down"></i>
+                        </a>
+                        <h3 class="m-b-0"></h3>
+                        <h2 class="text-lg m-t-0"></h2>
+                        <p class="lead"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="fullscreen background-image" id="maps">
+            <!--<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.js"></script>-->
+            <script src="script.js"></script>
+            <link rel="stylesheet"
+                href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.css"
+                type="text/css" />
+            <div id="map"></div>
+
+            <script>
+                // TO MAKE THE MAP APPEAR YOU MUST
+                // ADD YOUR ACCESS TOKEN FROM
+                // https://account.mapbox.com
+                mapboxgl.accessToken = 'pk.eyJ1IjoiemFubnkwMyIsImEiOiJja2RsOGVhbGcwdzJjMnhuMHcxNm53dnVhIn0.kpzk51j7urA8GZ3qztkL3g';
+                var map = new mapboxgl.Map({
+                    container: 'map',
+                    style: 'mapbox://styles/mapbox/streets-v11',
+                    center: [-79.4512, 43.6568],
+                    zoom: 13
+                });
+
+                map.addControl(
+                    new MapboxDirections({
+                        accessToken: mapboxgl.accessToken
+                    }),
+                    'top-left'
+                );
+            </script>
+        </section>
+
+        <section id="data" class="p-b-10" style="background-color: #E5E5E5;" data-aos="fade-up" data-bg-video="QO09XGPJIMG1LNGO (online-video-cutter.com).mp4">
+            <div class="container-fullscreen">
+                <!--<div class="row">
+<div class="col-lg-6">-->
+                <div class="heading-text heading-section" style=" margin: auto; width: 50%; padding: 10px;">
+                    <h2 style="text-align:center">
+                        FIND OUT YOUR CARBON FOOTPRINT
+                    </h2>
+                </div>
+                <div style=" margin: auto; width: 50%; padding: 10px;">
+                    <input type="text" id="number" placeholder="distance (km)">
+
+                    <p>Please select mode of transportation:</p>
+                    <div name="radio">
+                        <form>
+                            <select name="dropdown" id="dropdown">
+                                <option disabled hidden selected>Select</option>
+                                <option value="walk">Walking</option>
+                                <option value="drive">Driving</option>
+                                <option value="cycle">Cycling</option>
+                                <option value="transit">Public Transit</option>
+                            </select>
+                        </form>
+                    </div>
+
+
+                    <style>
+                        .transport {
+                            --primary: hsl(250, 100%, 44%);
+                            --other: hsl(0, 0%, 14%);
+                            background: hsl(0, 0%, 98%);
+                        }
+
+                        /* checked state */
+                        input:checked+.design::before {
+                            opacity: 1;
+                            transform: scale(.6);
+                        }
+
+
+                        /* other states */
+                        input:hover+.design,
+                        input:focus+.design {
+                            border: 1px solid var(--primary);
+                        }
+
+                        input:hover+.design:before,
+                        input:focus+.design:before {
+                            background: var(--primary);
+                        }
+
+                        input:hover~.text {
+                            color: var(--primary);
+                        }
+
+                        input:focus+.design::after,
+                        input:active+.design::after {
+                            opacity: .1;
+                            transform: scale(2.6);
+                        }
+                    </style>
+                    <div id="ifdrive" style="display: none;">
+                        <p>Please select type of vehicle</p>
+                        <form>
+                            <select name="transport" id="transport">
+                                <option disabled hidden selected>Select</option>
+                                <option value="car">Car</option>
+                                <option value="van">Van</option>
+                                <option value="motorcycle">Motorcycle</option>
+                                <option value="truck">Truck</option>
+                            </select>
+                        </form>
+                        <p>Please select type of fuel</p>
+                        <form>
+                            <select name="transport" id="fuel">
+                                <option disabled hidden selected>Select</option>
+                                <option value="gas">Gasoline</option>
+                                <option value="diesel">Diesel</option>
+                            </select>
+                        </form>
+                    </div>
+
+<br>
+                    <button id = "but" onClick = "buttonPress()" class="primary-btn">Go</button>
+                    <p></p>
+                    <p>Carbon Emissions:</p>
+                    <p id="demo"></p>
+                    <p>grams of CO2</p>
+                    <img id="green" src="1200px-Traffic_lights_green.svg.png" style="display:none;" />
+                    <img id="yellow" src="1200px-Traffic_lights_yellow.svg.png" style="display:none;" />
+                    <img id="red" src="1200px-Traffic_lights_red.svg.png" style="display:none;" />
+
+                    <br>
+                    <script type="text/javascript"></script>
+
+                    <img src="download__54_-removebg-preview.png">
+                    <p>Trees needed to offset:</p>
+                    <p id="treenum"></p>
+                    <p>trees</p>
+                    <p>Unable to go out and plant trees? Don't fret! Click donate in the navigation bar to plant a tree for just a dollar! Courtesy of Mr. Beast. If you cannot donate, consider tracking your plastic use, the plastic logger can help you!</p>
+                </div>
+            </div>
+            <div class="col-lg-6 m-t-60">
+            </div>
+        </section>
+    </div>
+
+    <a id="scrollTop"><i class="fa fa-chevron-up"></i><i class="fa fa-chevron-up"></i></a>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/plugins.js"></script>
+
+    <script src="js/functions.js"></script>
+    <script src="plugins/particles/particles.js" type="text/javascript"></script>
+    <script src="plugins/particles/particles-dots.js" type="text/javascript"></script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="htmlscript.js"></script>
+</body>
+
+</html>

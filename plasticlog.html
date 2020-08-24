@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="72-720588_simple-location-map-icon-dark-green-location-icon.png">
+    <!-- Author Meta -->
+    <meta name="author" content="">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Green Maps - Plastic Logger</title>
+
+
+
+    <!--
+			CSS
+			============================================= -->
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/hexagons.min.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="css/plugins.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/linearicons.css">
+</head>
+
+<body id="about">
+
+    <!--================ Offcanvus Menu Area =================-->
+    <header id="header" data-transparent="true" data-fullwidth="true" class="dark submenu-light">
+        <div class="header-inner">
+            <div class="container">
+
+                <div id="logo"><span class="logo-default"><img
+                            src="72-720588_simple-location-map-icon-dark-green-location-icon-removebg-preview.png">
+                    </span></div>
+
+
+
+
+
+                <div id="mainMenu-trigger"> <a class="lines-button x"><span class="lines"></span></a> </div>
+
+
+                <div id="mainMenu">
+                    <div class="container">
+                        <nav>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="index.html#maps">Map</a></li>
+                                <li><a href="index.html#data">Carbon Data</a></li>
+                                <li><a href="plasticlog.html">Plastic Logger</a></li>
+                                <li><a href="https://docs.mapbox.com/help/demos/optimization-api/step-five.html">Optimize Route</a></li>
+                                <li><a href="https://teamtrees.org/">Donate</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!--================ End Offcanvus Menu Area =================-->
+
+    <!--================ Canvus Menu Area =================
+    <div class="canvus_menu">
+        <div class="container">
+            <div class="toggle_icon" title="Menu Bar">
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!--================ End Canvus Menu Area =================-->
+
+    <!--================Home Banner Area =================-->
+    <section class="fullscreen background-image" data-bg-video = "7XL6D6STEMZOZ4H1 (online-video-cutter.com).mp4">
+        <div class="banner_inner overlay d-flex align-items-center">
+            <div class="container">
+                <div class="banner_content text-left">
+                    <h1 style="font-weight: bold;color:white;">Plastic Logger</h1>
+                    <h4 style="color:white;"> Below you will find a journal to log the date,
+                        the amount of plastic you used,
+                        and the carbon emitted
+                        (which you can find on our "Carbon Footprint" page) 
+                        See how you improved over time!</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+
+    <section>
+        <div style="margin-left: auto; margin-right: auto; width: 35%; padding: 10px;">
+            <img src = "rsz_828g_co2-removebg-preview.png">
+        </div>
+        <div style="margin-left: auto; margin-right: auto; width: 20%; padding: 10px;">
+        <p>Date:</p>
+        <input type="text" name="item" id="item" /><br />
+        <br>
+        <p>Plastic Used:</p>
+        <input type="text" name="quantity" id="quantity" /><br />
+        <br>
+        <p>CO2 Emissions (grams):</p>
+        <input type="text" name="price" id="price" /><br /><br />
+        <input type="button" value="Add Values" onclick="addRow()" id="add" class = "primary-btn"><br /><br />
+
+        <table id="table" border="1">
+            <tr>
+                <th>Date</th>
+                <th>Plastic Used</th>
+                <th>CO2 Emissions</th>
+            </tr>
+        </table>
+    </div>
+        <script>
+            function addRow() {
+                "use strict";
+
+                var table = document.getElementById("table");
+
+                var row = document.createElement("tr");
+                console.log(row);
+                var td1 = document.createElement("td");
+                var td2 = document.createElement("td");
+                var td3 = document.createElement("td");
+
+                td1.innerHTML = document.getElementById("item").value;
+                td2.innerHTML = document.getElementById("quantity").value;
+                td3.innerHTML = document.getElementById("price").value;
+
+                row.appendChild(td1);
+                row.appendChild(td2);
+                row.appendChild(td3);
+
+                table.children[0].appendChild(row);
+            };
+        </script>
+    </section>
+
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/hexagons.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <!-- contact js -->
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/contact.js"></script>
+    <!--gmaps Js-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+    <script src="js/gmaps.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/plugins.js"></script>
+
+    <script src="js/functions.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+</body>
+
+</html>
